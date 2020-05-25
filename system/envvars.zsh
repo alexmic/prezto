@@ -9,6 +9,8 @@ export SPACESHIP_PROMPT_SEPARATE_LINE=true
 export SPACESHIP_EXIT_CODE_SHOW=true
 export SPACESHIP_EXIT_CODE_SYMBOL=
 export SPACESHIP_GIT_STATUS_COLOR=blue
+export SPACESHIP_DIR_TRUNC_REPO=false
+export SPACESHIP_DIR_TRUNC=0
 export SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   venv          # virtualenv section
