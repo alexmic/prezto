@@ -10,7 +10,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+#
+# Custom init
+#
+
+#
+# Source globals
+#
 source "${ZDOTDIR:-$HOME}/.zprezto/system/envvars.zsh"
 source "${ZDOTDIR:-$HOME}/.zprezto/system/aliases.zsh"
 source "${ZDOTDIR:-$HOME}/.zprezto/system/functions.zsh"
+
+#
+# Configure GPG agent for SSH use
+#
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
